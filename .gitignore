@@ -1,6 +1,7 @@
 # Vim / Neovim
 # Swap files
-*.swp
+*.sw?
+.*.sw?
 
 # Backup files
 *~
@@ -10,3 +11,13 @@
 
 # Undo
 *.un~
+
+# Data
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Trained model checkpoints
+models/checkpoints/*
+!models/checkpoints/.gitkeep
