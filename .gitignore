@@ -1,0 +1,12 @@
+# Vim / Neovim
+# Swap files
+*.swp
+
+# Backup files
+*~
+*.bak
+*.orig
+*.rej
+
+# Undo
+*.un~
