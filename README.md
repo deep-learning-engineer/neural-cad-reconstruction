@@ -1,4 +1,4 @@
-# Drawing-to-3D
+# NCR (Neural Cad Reconstruction)
 
 **Generating 3D CAD models from 2D drawings using neural networks**
 
@@ -21,23 +21,33 @@ Every major architectural choice is documented as an Architecture Decision Recor
 
 ## Project Structure
 
-| Path | Purpose |
-|------|---------|
-| `data/raw/` | Original, unmodified data (drawings, scans, source datasets). |
-| `data/processed/` | Cleaned and prepared data ready for training/evaluation. |
-| `src/models/` | Neural network architectures and model definitions. |
-| `src/training/` | Training loops, loss functions, hyperparameter configs. |
-| `src/evaluation/` | Metrics, evaluation scripts, comparison against baselines. |
-| `src/utils/` | Shared utilities (data loading, logging, visualization). |
-| `models/checkpoints/` | Trained model weights and checkpoints. |
-| `docs/thesis/` | Thesis chapters in Markdown. |
-| `docs/assets/` | Figures, diagrams, and other assets used in the thesis. |
-| `docs/adr/` | Architecture Decision Records — why each key decision was made. |
-| `scripts/` | Helper scripts (e.g., thesis build via Pandoc). |
-| `results/figures/` | Generated plots and visualizations. |
-| `results/tables/` | Generated result tables (metrics, comparisons). |
+```
+neural-cad-reconstruction/
+├── data/
+│   ├── raw/                  # Original, unmodified data (source datasets)
+│   └── processed/            # Cleaned data ready for training/evaluation
+├── src/
+│   ├── models/               # Neural network architectures and model definitions
+│   ├── training/             # Training loops, loss functions, hyperparameter configs
+│   ├── evaluation/           # Metrics, evaluation scripts, baseline comparisons
+│   └── utils/                # Shared utilities (data loading, logging, visualization, ...)
+├── models/
+│   └── checkpoints/          # Trained model weights and checkpoints
+├── docs/
+│   ├── thesis/               # Thesis chapters in Markdown
+│   ├── research/             # Research materials (problem, SOTA, ...)
+│   ├── assets/               # Figures, diagrams, and other thesis assets
+│   └── adr/                  # Architecture Decision Records
+├── scripts/                  # Helper scripts (e.g., thesis build via Pandoc)
+└── results/
+    ├── figures/              # Generated plots and visualizations
+    └── tables/               # Generated result tables (metrics, comparisons)
+```
 
-**Note:** The thesis is written in Markdown and assembled into `.docx` via Pandoc. See `docs/thesis/README.md` (coming soon) for the build instructions.
+**Note:** 
+- `data/raw/`, `data/processed/`, and `models/checkpoints/` are excluded from Git (see `.gitignore`). Only `.gitkeep` placeholders are tracked. A public link to the full dataset and trained checkpoints will be added here when available.
+- `results/figures/` and `results/tables/` **are** tracked, so that experimental results can be inspected directly in the repository.
+- The thesis is written in Markdown and assembled into `.docx` via Pandoc. See `docs/thesis/README.md` (coming soon) for the build instructions.
 
 ---
 
